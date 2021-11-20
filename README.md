@@ -1,5 +1,5 @@
 # WP Assistance
-### Add class in li in wp_nav_menu
+### Add li class in wp_nav_menu
 In functions.php 
 
 function add_additional_class_on_li($classes, $item, $args) {
