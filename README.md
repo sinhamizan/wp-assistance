@@ -1,7 +1,7 @@
 # WP Assistance
 ### Add li class in wp_nav_menu
 In functions.php 
-```
+```ruby
 function add_additional_class_on_li($classes, $item, $args) {
     if(isset($args->add_li_class)) {
         $classes[] = $args->add_li_class;
