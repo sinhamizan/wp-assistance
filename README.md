@@ -44,8 +44,9 @@ wp_nav_maneu(array(
 
 ```
 
-## Get Current Category
+### Get Current Category
+```ruby
 $currCat = get_category(get_query_var('cat'));
 $cat_name = $currCat->name;  
 $cat_id   = get_cat_ID( $cat_name );
-
+```
