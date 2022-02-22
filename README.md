@@ -89,12 +89,6 @@ add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
 
 ###Removing the Website URL Field From WordPress Comment Form
 ```ruby
-
-2
-3
-4
-5
-6
 add_filter('comment_form_default_fields', 'unset_url_field');
 function unset_url_field($fields){
     if(isset($fields['url']))
