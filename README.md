@@ -76,3 +76,29 @@ $cat_id   = get_cat_ID( $cat_name );
     ) );
   echo '</div>';
   ```
+###Moving the Comment Text Field to Bottom
+```ruby
+function wpb_move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+```
+
+###Removing the Website URL Field From WordPress Comment Form
+```ruby
+
+2
+3
+4
+5
+6
+add_filter('comment_form_default_fields', 'unset_url_field');
+function unset_url_field($fields){
+    if(isset($fields['url']))
+       unset($fields['url']);
+       return $fields;
+}
+```
