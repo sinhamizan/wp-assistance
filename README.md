@@ -96,3 +96,12 @@ function unset_url_field($fields){
        return $fields;
 }
 ```
+
+### Change "Leave a reply" text in comment
+```ruby
+function change_reply_title($arg) {
+	$arg['title_reply'] =__('Leave a Comment');
+	return $arg;
+}
+add_filter('comment_form_defaults','change_reply_title');
+```
