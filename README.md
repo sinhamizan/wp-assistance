@@ -114,3 +114,19 @@ $cats = get_terms(array(
           'hide_empty' => false,
         ));
 	```
+### Custom Category wise post show | query
+```ruby
+$args = array(
+          'post_type' => 'our-services',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'service-category',
+              'field'    => 'slug',
+              'terms'    => 'web-design',
+            ),
+          ),
+          'posts_per_page' => -1,
+        );
+
+        $services = new WP_Query( $args );
+	```
