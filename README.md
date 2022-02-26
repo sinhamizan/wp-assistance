@@ -104,6 +104,7 @@ function change_reply_title($arg) {
 	return $arg;
 }
 add_filter('comment_form_defaults','change_reply_title');
+
 ```
 
 ### Display Custom post type category
@@ -113,7 +114,9 @@ $cats = get_terms(array(
           'taxonomy' => 'service-category',
           'hide_empty' => false,
         ));
-	```
+
+```
+
 ### Custom Category wise post show | query
 ```ruby
 $args = array(
@@ -129,4 +132,4 @@ $args = array(
         );
 
         $services = new WP_Query( $args );
-	```
+```
