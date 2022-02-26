@@ -105,3 +105,12 @@ function change_reply_title($arg) {
 }
 add_filter('comment_form_defaults','change_reply_title');
 ```
+
+### Display Custom post type category
+
+```ruby
+$cats = get_terms(array(
+          'taxonomy' => 'service-category',
+          'hide_empty' => false,
+        ));
+	```
